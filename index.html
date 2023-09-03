@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MelNet - Audio Samples</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+
+
+    <div class='section'>
+        <h1>DDSP-VAE: Acoustically-guided sound effects generation with DDSP</h1>
+        <div class="author-section">
+            <span class="author-block">
+                <a href="author-profile-link.html">Yunyi Liu</a><sup>1,2*</sup>,</span>
+                <span class="author-block">
+                <a href="author-profile-link.html">Craig Jin</a>, <sup>1</sup></span>
+                <span class="author-block">
+                <a href="author-profile-link.html">David Gunawan<sup>2</sup></a>
+                </span>
+        </div>
+        <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Sydney<br><sup>2</sup>Dolby Laboratory</span>
+            <span class="eql-cntrb"><small><br><sup>*</sup>Work done while interning at Dolby</small></span>
+          </div>
+
+        <img src="/Users/reinliu/Downloads/Architecture.png" alt="Description of the image" class="author-image">
+
+
+        <p>Deep audio generative networks typically require large
+amounts of data and computational resources, while rely-
+ing on excessive descriptive ground-truth labels to guide
+the sound generation. Differentiable digital signal process-
+ing(DDSP) is a variant of neural audio synthesis models that
+employ digital signal processing modules as part of the neural
+network architecture. By incorporating pre-processed audio
+features as conditioning vectors along with pre-written digital
+synthesizers it is capable of synthesizing high-quality mu-
+sical audio and controlling the acoustic characteristics(pitch
+and loudness) of the sounds. However, due to the limita-
+tion of its design, DDSP has its weaknesses in synthesizing
+impulsive signals and providing nuanced control over the
+complex timbres of the sound effects. In this research, we
+study sound effects modelling with DDSP by introducing a
+method to improve the synthesis performance of inharmonic
+and impulsive sound effects. We also propose a method that
+achieves controllable timbre morphing. We compare the gen-
+erated audio quality with the vanilla DDSP architecture on a
+few selected sound effects. We further qualitatively show its
+timbre transfer performance through objective measures.</p>
+    </div>
+
+    <hr>
+
+
+    <h1 class="section-title">Synthesis results</h1>
+
+    <!-- Gunshots section -->
+    <h2 class="section-title">Gunshots</h2>
+
+    <div class="column-section">
+        <!-- Column 1 -->
+        <div class="column">
+            <h4 class="title is-4">Reference</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Gunshots/037.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Gunshots/037.png" alt="Description 1">
+            </figure>
+            <h4 class="title is-4">Reference</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Gunshots/048.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Gunshots/048.png" alt="Description 1">
+            </figure>
+        </div>
+        
+    
+        <!-- Column 2 -->
+        <div class="column">
+            <h4 class="title is-4">DDSP</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Gunshots/DDSP_037.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Gunshots/ddsp-037.png" alt="Description 2">
+            </figure>
+            <h4 class="title is-4">DDSP</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Gunshots/DDSP_048.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Gunshots/ddsp-048.png" alt="Description 2">
+            </figure>
+        </div>
+    
+        <!-- Column 3 -->
+        <div class="column">
+            <h4 class="title is-4">DDSP-VAE</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Gunshots/DDSP-VAE_037.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Gunshots/ddsp-vae-037.png" alt="Description 3">
+            </figure>
+            <h4 class="title is-4">DDSP-VAE</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Gunshots/DDSP-VAE_048.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Gunshots/ddsp-vae-048.png" alt="Description 3">
+            </figure>
+        </div>
+    </div>
+
+
+    <!-- Footsteps section -->
+    <h2 class="section-title">Footsteps</h2>
+
+    <div class="column-section">
+        <!-- Column 1 -->
+        <div class="column">
+            <h4 class="title is-4">Reference</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Footsteps/1.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Footsteps/1.png" alt="Description 1">
+            </figure>
+            <h4 class="title is-4">Reference</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Footsteps/2.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Footsteps/2.png" alt="Description 1">
+            </figure>
+            <h4 class="title is-4">Reference</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Footsteps/3.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Footsteps/3.png" alt="Description 1">
+            </figure>
+        </div>
+        
+    
+        <!-- Column 2 -->
+        <div class="column">
+            <h4 class="title is-4">DDSP</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Footsteps/ddsp-1.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Footsteps/ddsp-1.png" alt="Description 2">
+            </figure>
+            <h4 class="title is-4">DDSP</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Footsteps/ddsp-2.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Footsteps/ddsp-2.png" alt="Description 2">
+            </figure>
+            <h4 class="title is-4">DDSP</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Footsteps/ddsp-3.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Footsteps/ddsp-3.png" alt="Description 2">
+            </figure>
+        </div>
+    
+        <!-- Column 3 -->
+        <div class="column">
+            <h4 class="title is-4">DDSP-VAE</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Footsteps/ddspvae-1.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Footsteps/ddsp-vae-1.png" alt="Description 3">
+            </figure>
+            <h4 class="title is-4">DDSP-VAE</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Footsteps/ddspvae-1.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Footsteps/ddsp-vae-1.png" alt="Description 3">
+            </figure>
+            <h4 class="title is-4">DDSP-VAE</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Footsteps/ddspvae-1.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Footsteps/ddsp-vae-1.png" alt="Description 3">
+            </figure>
+        </div>
+    </div>
+    
+
+    <!-- Motors section -->
+    <h2 class="section-title">Motors</h2>
+
+    <div class="column-section">
+        <!-- Column 1 -->
+        <div class="column">
+            <h4 class="title is-4">Reference</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Motors/1.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Motors/1.png" alt="Description 1">
+            </figure>
+            <h4 class="title is-4">Reference</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Motors/2.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Motors/2.png" alt="Description 1">
+            </figure>
+            <h4 class="title is-4">Reference</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Motors/3.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Motors/3.png" alt="Description 1">
+            </figure>
+        </div>
+        
+    
+        <!-- Column 2 -->
+        <div class="column">
+            <h4 class="title is-4">DDSP</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Motors/DDSP-1.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Motors/DDSP-1.png" alt="Description 2">
+            </figure>
+            <h4 class="title is-4">DDSP</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Motors/DDSP-2.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Motors/DDSP-2.png" alt="Description 2">
+            </figure>
+            <h4 class="title is-4">DDSP</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Motors/DDSP-3.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Motors/DDSP-3.png" alt="Description 2">
+            </figure>
+        </div>
+    
+        <!-- Column 3 -->
+        <div class="column">
+            <h4 class="title is-4">DDSP-VAE</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Motors/DDSP-VAE_1.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Motors/DDSP-VAE_1.png" alt="Description 3">
+            </figure>
+            <h4 class="title is-4">DDSP-VAE</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Motors/DDSP-VAE_2.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Motors/DDSP-VAE_2.png" alt="Description 3">
+            </figure>
+            <h4 class="title is-4">DDSP-VAE</h4>
+            <audio preload='metadata' controls>
+                <source src='Reconstruction/Motors/DDSP-VAE_3.wav' type='audio/wav'>
+            </audio>
+            <figure class="image">
+                <img src="Reconstruction/Motors/DDSP-VAE_3.png" alt="Description 3">
+            </figure>
+        </div>
+    </div>
+
+
+
+    <hr>
+
+
+    <h2 class="section-title">Voice-to-SFX timbre transfer</h2>
+
+    <div class="column-section">
+        <!-- Column 1 -->
+        <div class="column">
+            <h4 class="title is-4">Gunshots</h4>
+            <audio preload='metadata' controls>
+                <source src='path-to-audio1.mp3' type='audio/mpeg'>
+            </audio>
+            <figure class="image">
+                <img src="path-to-image1.png" alt="Description 1">
+            </figure>
+            
+        </div>
+        
+    
+        <!-- Column 2 -->
+        <div class="column">
+            <h4 class="title is-4">DDSP-VAE</h4>
+            <audio preload='metadata' controls>
+                <source src='path-to-audio2.mp3' type='audio/mpeg'>
+            </audio>
+            <figure class="image">
+                <img src="path-to-image2.png" alt="Description 2">
+            </figure>
+        </div>
+    
+        <!-- Column 3 -->
+        <div class="column">
+            <h4 class="title is-4">Motors</h4>
+            <audio preload='metadata' controls>
+                <source src='path-to-audio3.mp3' type='audio/mpeg'>
+            </audio>
+            <figure class="image">
+                <img src="path-to-image3.png" alt="Description 3">
+            </figure>
+        </div>
+    </div>
+
+
+    <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/audio-samples/audio-samples.github.io" target="_blank">Academic Project Page Template</a>.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
+
+<script>
+document
+    .getElementById('select-speaker')
+    .addEventListener('change', function () {
+        'use strict';
+        var targets = document.getElementsByClassName("select-speaker")
+        for (let i = 0; i < targets.length; i++) {
+            name = "samples/mp3/ted_speakers/" + this.value + "/sample-" + i.toString() + ".mp3"
+            targets[i].setAttribute("src", name)
+            targets[i].parentElement.load()
+        }
+});
+</script>
