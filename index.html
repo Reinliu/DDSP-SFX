@@ -64,6 +64,13 @@ timbre transfer performance through objective measures.</p>
 
     <h1 class="section-title">Synthesis results</h1>
 
+    <div class="section">
+        <p>Below we show our synthesis results. We use some reference SFX tracks as guiding sounds and extract their acoustic features including fundamental frequency, 
+            amplitude, transient components, and mel-spectrograms. We fed these features into our model to perform timbre transfer. Ideally the generated sound should be 
+            identical or close to the reference soundtrack. 
+            </p>
+        </div>
+
     <!-- Gunshots section -->
     <h2 class="section-title">Gunshots</h2>
 
@@ -191,17 +198,17 @@ timbre transfer performance through objective measures.</p>
             </figure>
             <h4 class="title is-4">DDSP-SFX</h4>
             <audio preload='metadata' controls>
-                <source src='Reconstruction/Footsteps/ddspvae-1.wav' type='audio/wav'>
+                <source src='Reconstruction/Footsteps/ddspvae-2.wav' type='audio/wav'>
             </audio>
             <figure class="image">
-                <img src="Reconstruction/Footsteps/ddsp-vae-1.png" alt="Description 3">
+                <img src="Reconstruction/Footsteps/ddsp-vae-2.png" alt="Description 3">
             </figure>
             <h4 class="title is-4">DDSP-SFX</h4>
             <audio preload='metadata' controls>
-                <source src='Reconstruction/Footsteps/ddspvae-1.wav' type='audio/wav'>
+                <source src='Reconstruction/Footsteps/ddspvae-3.wav' type='audio/wav'>
             </audio>
             <figure class="image">
-                <img src="Reconstruction/Footsteps/ddsp-vae-1.png" alt="Description 3">
+                <img src="Reconstruction/Footsteps/ddsp-vae-3.png" alt="Description 3">
             </figure>
         </div>
     </div>
@@ -295,10 +302,16 @@ timbre transfer performance through objective measures.</p>
 
     <h2 class="section-title">Voice-to-SFX timbre transfer</h2>
 
+    <div class="section">
+    <p>Our model is capable of performing timbre transfer from out-of-domain sounds. We use voice as guiding sounds to showcase this. We extract the fundamental frequency
+        and amplitude contours from the voice. We feed in a self-determined latent vector z to variate the timbres.
+        </p>
+    </div>
+
     <div class="column-section">
         <!-- Column 1 -->
         <div class="column">
-            <h4 class="title is-4">Gunshots</h4>
+            <h4 class="title is-4">Voice</h4>
             <audio preload='metadata' controls>
                 <source src='path-to-audio1.mp3' type='audio/mpeg'>
             </audio>
@@ -311,7 +324,7 @@ timbre transfer performance through objective measures.</p>
     
         <!-- Column 2 -->
         <div class="column">
-            <h4 class="title is-4">DDSP-SFX</h4>
+            <h4 class="title is-4">z=0</h4>
             <audio preload='metadata' controls>
                 <source src='path-to-audio2.mp3' type='audio/mpeg'>
             </audio>
@@ -322,7 +335,7 @@ timbre transfer performance through objective measures.</p>
     
         <!-- Column 3 -->
         <div class="column">
-            <h4 class="title is-4">Motors</h4>
+            <h4 class="title is-4">z=10sigma after 2s</h4>
             <audio preload='metadata' controls>
                 <source src='path-to-audio3.mp3' type='audio/mpeg'>
             </audio>
