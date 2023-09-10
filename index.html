@@ -36,27 +36,16 @@
         <img src="images/Architecture.png" alt="Description of the image" class="author-image">
 
 
-        <p>Deep audio generative networks typically require large
-amounts of data and computational resources, while rely-
-ing on excessive descriptive ground-truth labels to guide
-the sound generation. Differentiable digital signal process-
-ing(DDSP) is a variant of neural audio synthesis models that
-employ digital signal processing modules as part of the neural
-network architecture. By incorporating pre-processed audio
-features as conditioning vectors along with pre-written digital
-synthesizers it is capable of synthesizing high-quality mu-
-sical audio and controlling the acoustic characteristics(pitch
-and loudness) of the sounds. However, due to the limita-
-tion of its design, DDSP has its weaknesses in synthesizing
-impulsive signals and providing nuanced control over the
-complex timbres of the sound effects. In this research, we
-study sound effects modelling with DDSP by introducing a
-method to improve the synthesis performance of inharmonic
-and impulsive sound effects. We also propose a method that
-achieves controllable timbre morphing. We compare the gen-
-erated audio quality with the vanilla DDSP architecture on a
-few selected sound effects. We further qualitatively show its
-timbre transfer performance through objective measures.</p>
+        <p>Deep audio generative networks typically require large amounts of data and computational resources, while relying on 
+            excessive descriptive ground-truth labels to guide the sound generation. Differentiable digital signal processing(DDSP) 
+            is a variant of neural audio synthesis models that employ digital signal processing modules as part of the neural network architecture. 
+            By incorporating pre-processed audio features as conditioning vectors along with pre-written digital synthesizers it is capable of 
+            synthesizing high-quality musical audio and controlling the acoustic characteristics(pitch and loudness) of the sounds. However, 
+            due to the limitation of its design, DDSP has its weaknesses in synthesizing impulsive signals and providing nuanced control over the
+            complex timbres of the sound effects. In this research, we study sound effects modelling with DDSP by introducing a method to improve 
+            the synthesis performance of inharmonic and impulsive sound effects. We also propose a method that achieves controllable timbre morphing. 
+            We compare the generated audio quality with the vanilla DDSP architecture on a few selected sound effects. We further qualitatively show 
+            its timbre transfer performance through objective measures.</p>
     </div>
 
     <hr>
@@ -346,6 +335,55 @@ timbre transfer performance through objective measures.</p>
     </div>
 
 
+    <!-- Temporal timbre encoding-->
+    <h2 class="section-title">Temporal timbre encoding</h2>
+
+    <div class="section">
+    <p> We show that our latent space has encoded the time-varying timbre variations of the sounds. To do this, we use the same guiding vocalisations and perform timbre transfer.
+        The 
+        </p>
+    </div>
+
+    <div class="column-section">
+        <!-- Column 1 -->
+        <div class="column">
+            <h4 class="title is-4">Voice</h4>
+            <audio preload='metadata' controls>
+                <source src='path-to-audio1.mp3' type='audio/mpeg'>
+            </audio>
+            <figure class="image">
+                <img src="path-to-image1.png" alt="Description 1">
+            </figure>
+            
+        </div>
+        
+    
+        <!-- Column 2 -->
+        <div class="column">
+            <h4 class="title is-4">z=0</h4>
+            <audio preload='metadata' controls>
+                <source src='path-to-audio2.mp3' type='audio/mpeg'>
+            </audio>
+            <figure class="image">
+                <img src="path-to-image2.png" alt="Description 2">
+            </figure>
+        </div>
+    
+        <!-- Column 3 -->
+        <div class="column">
+            <h4 class="title is-4">z=10sigma after 2s</h4>
+            <audio preload='metadata' controls>
+                <source src='path-to-audio3.mp3' type='audio/mpeg'>
+            </audio>
+            <figure class="image">
+                <img src="path-to-image3.png" alt="Description 3">
+            </figure>
+        </div>
+    </div>
+    <!-- End Temporal timbre encoding-->
+
+
+
     <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
@@ -373,7 +411,6 @@ timbre transfer performance through objective measures.</p>
     </div>
   </div>
 </footer>
-
 
 </body>
 </html>
