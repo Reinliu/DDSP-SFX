@@ -42,10 +42,11 @@
             By incorporating pre-processed audio features as conditioning vectors along with pre-written digital synthesizers it is capable of 
             synthesizing high-quality musical audio and controlling the acoustic characteristics(pitch and loudness) of the sounds. However, 
             due to the limitation of its design, DDSP has its weaknesses in synthesizing impulsive signals and providing nuanced control over the
-            complex timbres of the sound effects. In this research, we study sound effects modelling with DDSP by introducing a method to improve 
-            the synthesis performance of inharmonic and impulsive sound effects. We also propose a method that achieves controllable timbre morphing. 
-            We compare the generated audio quality with the vanilla DDSP architecture on a few selected sound effects. We further qualitatively show 
-            its timbre transfer performance through objective measures.</p>
+            complex timbres of the sound effects. To this end we incorporate Verma's method to synthesize impulsive signals into the DDSP architecture.
+            Below we show the performance of sound synthesized from DDSP and our approach, DDSP-SFX. We use a reference sound effect and perform timbre transfer
+            by extracting the required audio features as input to the decoder. 
+            
+        </p>
     </div>
 
     <hr>
@@ -283,6 +284,14 @@
             </figure>
         </div>
     </div>
+    <div>
+        <p>Above we could see that for impulsive sounds (footsteps and gunshots), DDSP tends to rely heavily on its harmonic synthesizer, with very audible
+            harmonic artifacts. This is because we set the number of harmonics for the harmonic synthesizer as 100, for unity purposes. 
+            The decoder by itself doesn't learn to attenuate the harmonic synthesizer very well with this structure. Our approach could synthesize inharmonic 
+            sounds easily with an indicative harmonic attentuator. Further, our approach seems to synthesize impulsive sounds with sharper attacks. This could
+            be seen in gunshot sounds which contain many fast repetitive impulses. 
+            </p>
+        </div>
 
 
 
