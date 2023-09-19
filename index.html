@@ -298,9 +298,9 @@
     <hr>
 
 
-    <h2 class="section-title">Voice-to-SFX timbre transfer</h2>
-
-    <div class="section">
+    <h1 class="section-title">Voice-to-SFX timbre transfer</h2>
+    <h2 class="section-title">Gunshots</h2>
+    <div class="section-title">
     <p>Our model is capable of performing timbre transfer from out-of-domain sounds. We use voice as guiding sounds to showcase this. We extract the fundamental frequency
         and amplitude contours from the voice. We feed in a self-determined latent vector z to variate the timbres.
         </p>
@@ -311,7 +311,7 @@
         <div class="column">
             <h4 class="title is-4">Voice</h4>
             <audio preload='metadata' controls>
-                <source src='path-to-audio1.mp3' type='audio/mpeg'>
+                <source src='/Users/reinliu/Downloads/DDSP-SFX/Presentation demo/synthesized/Gunshots/voice_explosion_1.wav' type='audio/wav'>
             </audio>
             <figure class="image">
                 <img src="path-to-image1.png" alt="Description 1">
@@ -324,7 +324,7 @@
         <div class="column">
             <h4 class="title is-4">z=0</h4>
             <audio preload='metadata' controls>
-                <source src='path-to-audio2.mp3' type='audio/mpeg'>
+                <source src='/Users/reinliu/Downloads/DDSP-SFX/Presentation demo/synthesized/Gunshots/gunshots-300-1.wav' type='audio/wav'>
             </audio>
             <figure class="image">
                 <img src="path-to-image2.png" alt="Description 2">
@@ -333,15 +333,17 @@
     
         <!-- Column 3 -->
         <div class="column">
-            <h4 class="title is-4">z=10sigma after 2s</h4>
+            <h4 class="title is-4">z=3 after 2s</h4>
             <audio preload='metadata' controls>
-                <source src='path-to-audio3.mp3' type='audio/mpeg'>
+                <source src='/Users/reinliu/Downloads/DDSP-SFX/Presentation demo/synthesized/Gunshots/gunshots-1-300-0.wav' type='audio/wav'>
             </audio>
             <figure class="image">
                 <img src="path-to-image3.png" alt="Description 3">
             </figure>
         </div>
     </div>
+
+
 
 
     <!-- Temporal timbre encoding-->
@@ -358,7 +360,7 @@
         <div class="column">
             <h4 class="title is-4">Voice</h4>
             <audio preload='metadata' controls>
-                <source src='path-to-audio1.mp3' type='audio/mpeg'>
+                <source src='path-to-audio1.mp3' type='audio/wav'>
             </audio>
             <figure class="image">
                 <img src="path-to-image1.png" alt="Description 1">
@@ -371,7 +373,7 @@
         <div class="column">
             <h4 class="title is-4">z=0</h4>
             <audio preload='metadata' controls>
-                <source src='path-to-audio2.mp3' type='audio/mpeg'>
+                <source src='path-to-audio2.mp3' type='audio/wav'>
             </audio>
             <figure class="image">
                 <img src="path-to-image2.png" alt="Description 2">
@@ -382,7 +384,7 @@
         <div class="column">
             <h4 class="title is-4">z=10sigma after 2s</h4>
             <audio preload='metadata' controls>
-                <source src='path-to-audio3.mp3' type='audio/mpeg'>
+                <source src='path-to-audio3.mp3' type='audio/wav'>
             </audio>
             <figure class="image">
                 <img src="path-to-image3.png" alt="Description 3">
@@ -396,7 +398,7 @@
     <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
+      <h4 class="title">BibTeX</h4>
       <pre><code>@misc{liu2023ddspsfx,
         title={DDSP-SFX: Acoustically-guided sound effects generation with differentiable digital signal processing}, 
         author={Yunyi Liu and Craig Jin and David Gunawan},
