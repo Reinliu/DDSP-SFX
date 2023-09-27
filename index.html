@@ -52,9 +52,15 @@
     <hr>
 
     <h1 class="section-title">Transient Modelling</h1>
-
+    <div class='section'>
     <figure class="image">
         <img src="images/Transient model.png" alt="Description 1">
+
+        In the preprocessing stage, we extract a guiding amplitude vector from the target sound effects following the steps as shown above: computing STFT, performing a 
+        harmonic-percussive source separation of the signal, computing the spectral peak of the percussive signal, and then getting the amplitude vector of the place 
+        where it detects a spectral peak. The decoder uses this information to output the required amplitude and frequency for the sinusoidal modelling in the DCT domain.
+        Once the sinusoids are synthesized, we convert them to time domain using IDCT, which would result in various kinds of transient signals in different time frames.
+        </div>
 
     <h1 class="section-title">Synthesis results</h1>
 
